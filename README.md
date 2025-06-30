@@ -45,5 +45,5 @@ A simple interactive map web app for selecting a location and assigning an **act
 
 Developed with ❤️ by Alireza Ghazanfari
 
-netlify web address: https://github.com/Alireza-Ghazanfari-0/Mapthy-app.git
+netlify web address: https://mapthy-application.netlify.app/
 
