@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mapthy</title>
+
+    <link
+      rel="stylesheet"
+      href="src/libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css"
+    />
+    <script src="src/libs/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="src/style/mapty.css" />
+  </head>
+  <body>
+    <div
+      class="row justify-content-center ms-4 me-4"
+      style="margin-top: 3vh; height: 94vh"
+    >
+      <div
+        class="col-4"
+        style="background-color: rgb(45, 52, 57); height: 100%"
+      >
+        <div
+          class="row align-items-center justify-content-center"
+          style="height: 15vh"
+        >
+          <img src="src/images/logo.png" style="width: 30%" class="" alt="" />
+        </div>
+        <div style="height: 67vh" class="comments">
+          <form
+            class="container row text-white mx-auto py-2 rounded mb-2 formm hidden"
+            style="width: 85%; background-color: #658cab"
+          >
+            <div class="col-6">
+              <div class="row">
+                <label
+                  for="type"
+                  class="col col-lg-6 col-form-label col-form-label-sm"
+                  >Type</label
+                >
+                <select
+                  class="col form-select form-select-sm selection"
+                  id="type"
+                >
+                  <option value="1">Running</option>
+                  <option value="2">Cycling</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-6 mb-2">
+              <div class="row">
+                <label
+                  for="distance"
+                  class="col col-lg-6 col-form-label col-form-label-sm"
+                  >Distance</label
+                >
+                <input
+                  type=""
+                  class="col form-control form-control-sm distancee"
+                  id="distance"
+                  placeholder="km"
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row">
+                <label
+                  for="duration"
+                  class="col col-lg-6 col-form-label col-form-label-sm"
+                  >Duration</label
+                >
+                <input
+                  type=""
+                  class="col form-control form-control-sm durationn"
+                  id="duration"
+                  placeholder="min"
+                />
+              </div>
+            </div>
+            <div class="col-6 cad">
+              <div class="row">
+                <label
+                  for="cadence"
+                  class="col col-lg-6 col-form-label col-form-label-sm"
+                  >Cadence</label
+                >
+                <input
+                  type=""
+                  class="col form-control form-control-sm cadencee"
+                  id="cadence"
+                  placeholder="step/min"
+                />
+              </div>
+            </div>
+            <div class="col-6 elevat hidden">
+              <div class="row">
+                <label
+                  for="elev"
+                  class="col col-lg-6 col-form-label col-form-label-sm"
+                  >ElevGain</label
+                >
+                <input
+                  type=""
+                  class="col form-control form-control-sm elevationn"
+                  id="elev"
+                  placeholder="meters"
+                />
+              </div>
+            </div>
+            <button style="display: none">OK</button>
+          </form>
+          <!-- <div
+            class="container ps-4 text-white bg-danger mx-auto py-2 rounded mb-2 runningOutput hidden"
+            style="width: 85%; border-left: 0.5vw solid green"
+          >
+            <div class="mb-1">Running on <span class="datee"></span></div>
+            <div class="row">
+              <span class="col-auto" style="font-size: smaller"
+                ><span class="runDistt"></span> KM</span
+              >
+              <span class="col-auto" style="font-size: smaller"
+                ><span class="runTimee"></span> MIN</span
+              >
+              <span class="col-auto" style="font-size: smaller"
+                ><span class="runMinOverKmm"></span> MIN/KM</span
+              >
+              <span class="col-auto" style="font-size: smaller"
+                ><span class="runSpmm"></span> SPM</span
+              >
+            </div>
+          </div> -->
+          <!--<div
+            class="container ps-4 text-white bg-info mx-auto py-2 rounded mb-2 cyclingOutput hidden"
+            style="width: 85%; border-left: 0.5vw solid orange"
+          >
+            <div class="mb-1">Cycling on <span class="dateee"></span></div>
+            <div class="row">
+              <span class="col-auto" style="font-size: smaller"
+                ><span class="cycleDistt"></span> KM</span
+              >
+              <span class="col-auto" style="font-size: smaller"
+                ><span class="cycleTimee"></span> MIN</span
+              >
+              <span class="col-auto" style="font-size: smaller"
+                ><span class="cycleKmOverHourr"></span> KM/H</span
+              >
+              <span class="col-auto" style="font-size: smaller"
+                ><span class="cycleElevv"></span> M</span
+              >
+            </div>
+          </div>-->
+          <!---->
+
+          <!---->
+        </div>
+        <div
+          class="pt-3 ps-4 pe-4 small opacity-50 text-center"
+          style="height: 15vh; color: bisque"
+        >
+          &copy; This app was developed by Alireza Ghazanfari, which has been
+          trained by Jonas Schmedtmann
+        </div>
+      </div>
+      <div
+        class="col-8"
+        id="mapWindow"
+        style="background-color: rgb(170, 170, 170)"
+      ></div>
+    </div>
+
+    <script src="src/style/mapty.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+/** {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*/
+.markerCSS1 .leaflet-popup-content-wrapper {
+  border-left: 0.7vw solid green;
+}
+
+.markerCSS2 .leaflet-popup-content-wrapper {
+  border-left: 0.7vw solid orange;
+}
+
+.hidden {
+  display: none;
+}
+
+.comments {
+  overflow-y: auto;
+}
