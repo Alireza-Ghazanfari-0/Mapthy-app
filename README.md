@@ -28,9 +28,9 @@ A simple interactive map web app for selecting a location and assigning an **act
    ```bash
    git clone https://github.com/Alireza-Ghazanfari-0/Mapthy-app.git
 
-    Open the index.html file in your browser
+2. Open the index.html file in your browser
 
-    Start selecting locations and assigning activities!
+3. Start selecting locations and assigning activities!
 
 ⚠️ This app does not use a database or local storage. Refreshing the page resets all data to default state.
 🎯 Future Improvements
@@ -44,4 +44,6 @@ A simple interactive map web app for selecting a location and assigning an **act
 🧑‍💻 Developer
 
 Developed with ❤️ by Alireza Ghazanfari
+
+netlify web address: https://github.com/Alireza-Ghazanfari-0/Mapthy-app.git
 
