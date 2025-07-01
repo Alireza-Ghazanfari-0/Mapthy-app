@@ -35,18 +35,18 @@ An interactive, simple web app (map) to select locations on the map and assign *
 1. Clone the repository:
    ```bash
    git clone https://github.com/Alireza-Ghazanfari-0/Mapthy-app.git
-Open the index.html file in your browser
+2. Open the index.html file in your browser
 
-Start selecting locations and assigning activities! 🎯
-
-⚠️ Important Notes
+3. Start selecting locations and assigning activities! 🎯
+***
+## ⚠️ Important Notes
 This project is fully frontend-only, no database or backend is connected
 
 No local storage; refreshing the page will reset all data
 
 Built for learning, demo, and educational purposes
-
-🌟 Future Improvements
+***
+## 🌟 Future Improvements
 Add local storage for activity persistence
 
 Enable editing or deleting activities
@@ -54,7 +54,7 @@ Enable editing or deleting activities
 Enhance mobile responsiveness
 
 Add activity filtering and sorting
-
-👨‍💻 Developer
+***
+## 👨‍💻 Developer
 Developed with ❤️ by Alireza Ghazanfari
 📧 alireza.ghazanfari@yahoo.com
